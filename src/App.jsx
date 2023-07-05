@@ -5,7 +5,7 @@ import { MessageInput } from './components/MessageInput'
 import { Header } from './components/Header'
 import { Sidemenu } from './components/Sidemenu'
 
-const API_KEY = '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'
+const API_KEY = import.meta.env.VITE_API_KEY
 
 function App() {
   const [language, setLanguage] = useState('')
