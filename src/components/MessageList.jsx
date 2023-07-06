@@ -20,7 +20,7 @@ export const MessageList = ({messages, typingIndicator}) => {
     <div className="h-[75%] overflow-auto">    
         {messages?.map((messageObject, i) => {
             return (
-                <div key={i} className={`flex items-center p-10 ss:text-base text-[14px] lg:px-32 xl:px-72 px-16 ${
+                <div key={i} className={`ss:mt-0 mt-10 flex items-center p-10 ss:text-base text-[14px] lg:px-32 xl:px-72 ss:px-16 px-2 ${
                     messageObject.sender === 'ChatGPT' 
                             ? "flex-row bg-bgThird" 
                             : "flex-row-reverse"
@@ -59,7 +59,7 @@ export const MessageList = ({messages, typingIndicator}) => {
         })}
         { typingIndicator && 
             <div 
-                className="flex items-center bg-bgThird p-10 flex-row lg:px-32 xl:px-72 px-16">
+                className="flex items-center bg-bgThird p-10 flex-row lg:px-32 xl:px-72 ss:px-16 px-2">
                 <img 
                         src={GPTIcon} 
                         alt="Icon"

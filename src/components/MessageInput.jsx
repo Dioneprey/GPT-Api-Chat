@@ -12,8 +12,8 @@ export const MessageInput = ({onSender, typingIndicator, placeHolder, language})
   }
 
   return (
-    <div className="max-h-[25%] space-y-5 p-5 flex flex-col lg:px-32 xl:px-72 px-16">
-      <div className="flex space-x-5">
+    <div className="max-h-[25%] space-y-5 p-5 flex flex-col lg:px-32 xl:px-72 ss:px-16 px-2">
+      <div className="flex xs:flex-row flex-col xs:space-x-5 xs:space-y-0 space-y-2">
         <select 
           onChange={(e) => setSystem(e.target.value)}
           className="p-2 bg-bgThird border border-zinc-600 rounded-lg outline-none"
@@ -39,7 +39,7 @@ export const MessageInput = ({onSender, typingIndicator, placeHolder, language})
             value="gpt-4">GPT-4</option>
         </select>
       </div>
-      <div className="flex space-x-10 items-center">
+      <div className="flex xs:flex-row xs:space-x-5 flex-col items-center justify-center">
         <textarea
           placeholder={placeHolder}
           onKeyUp={(e) => {
@@ -58,7 +58,7 @@ export const MessageInput = ({onSender, typingIndicator, placeHolder, language})
             handleSender(message)
             setMessage("")
           }}
-          className={`${typingIndicator || message?.length < 1 && message == "" ? 'bg-zinc-600' : 'bg-greenPrimary'} duration-200 transition-all group p-3 flex items-center rounded-lg hover:opacity-[0.95]`}>
+          className={`${typingIndicator || message?.length < 1 && message == "" ? 'bg-zinc-600' : 'bg-greenPrimary'} xs:mt-0 mt-5 xs:w-auto w-full justify-center duration-200 transition-all group p-3 flex items-center rounded-lg hover:opacity-[0.95]`}>
           <span class="material-icons group-hover:translate-x-[0.09rem] duration-200 transition-all">
             send
           </span>
